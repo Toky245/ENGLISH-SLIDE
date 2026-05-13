@@ -1,5 +1,47 @@
 (() => {
   // ============================================================
+  // 0. TEAM DATA — names/IDs stored encoded (decoded at runtime)
+  // ============================================================
+  const _T = [
+    null, // index 0 unused — pids start at 1
+    { n: 'UkFIQUpBU09OIEF1ZHJleQ==',                  i: 'IzQ2MDY=' }, // 1
+    { n: 'QU5EUklBTkFSSVZPTlkgVG9reSBBcm9uaWFpbmE=',  i: 'IzQ2MDg=' }, // 2
+    { n: 'UklWT01BTkFOVElBUkFZIE1pb3JhIE55IEFpbmE=',  i: 'IzQ2MDk=' }, // 3
+    { n: 'RkVUSVNPTiBNaW9yYWxhbGFpbmEgQ2FsaW5l',      i: 'IzQ2MTA=' }, // 4
+    { n: 'QU5EUklBTkpBUkEgSmFjb2IgUmlubw==',          i: 'IzQ2MTE=' }  // 5
+  ];
+  const _d = (b) => { try { return atob(b); } catch (e) { return ''; } };
+
+  const populateTeam = () => {
+    // Cover team list
+    const list = document.querySelector('[data-team-list]');
+    if (list) {
+      list.innerHTML = '';
+      for (let k = 1; k < _T.length; k++) {
+        const li = document.createElement('li');
+        const s1 = document.createElement('span');
+        const s2 = document.createElement('span');
+        s2.className = 'num';
+        s1.textContent = _d(_T[k].n);
+        s2.textContent = _d(_T[k].i);
+        li.appendChild(s1); li.appendChild(s2);
+        list.appendChild(li);
+      }
+    }
+    // Presenter badges
+    document.querySelectorAll('.presenter-badge[data-pid]').forEach(el => {
+      const pid = parseInt(el.dataset.pid, 10);
+      const t = _T[pid];
+      if (!t) return;
+      const n = el.querySelector('.pb-name');
+      const i = el.querySelector('.pb-num');
+      if (n) n.textContent = _d(t.n);
+      if (i) i.textContent = _d(t.i);
+    });
+  };
+  populateTeam();
+
+  // ============================================================
   // 1. REMOTE MODE — phone side, controls the host
   // ============================================================
   const urlParams = new URLSearchParams(window.location.search);
