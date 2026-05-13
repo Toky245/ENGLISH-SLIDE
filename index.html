@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Group 3 - M1 OCC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Patrick+Hand&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<header class="topbar">
+  <div class="counter">
+    <span id="currentSlide">1</span><span class="sep">/</span><span id="totalSlides">12</span>
+  </div>
+</header>
+
+<main class="deck" id="deck">
+
+  <!-- ========== SLIDE 1 : COVER ========== -->
+  <section class="slide cover active" data-slide="1">
+
+    <div class="cover-header">
+      <div class="ch-line1">ENI — École Nationale d'Informatique</div>
+      <div class="ch-line2">English Presentation</div>
+    </div>
+
+    <div class="cover-split">
+
+      <div class="cover-left">
+        <h1 class="cover-title">
+          <span class="word">Private</span><br />
+          <span class="word">Password</span><br />
+          <span class="word stamp">Security</span>
+        </h1>
+        <p class="cover-sub">~ Group Project ~</p>
+        <p class="cover-presented">Presented by <strong>GROUP 3</strong></p>
+      </div>
+
+      <div class="cover-right">
+        <div class="cover-team-box">
+          <h3 class="cover-team-title">Team members</h3>
+          <ul class="cover-team">
+            <li><span>RAHAJASON Audrey</span><span class="num">#4606</span></li>
+            <li><span>ANDRIANARIVONY Toky Aroniaina</span><span class="num">#4608</span></li>
+            <li><span>RIVOMANANTIARAY Miora Ny Aina</span><span class="num">#4609</span></li>
+            <li><span>FETISON Mioralalaina Caline</span><span class="num">#4610</span></li>
+            <li><span>ANDRIANJARA Jacob Rino</span><span class="num">#4611</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <img class="cover-mascot" src="assets/rage/fuckyea.jpg" alt="Fuck Yea" />
+
+    <footer class="cover-footer">
+      <div class="left">
+        <span class="pill">Master 1 OCC</span>
+        <span>University of Fianarantsoa — ENI</span>
+      </div>
+      <div class="right">2026 ✎</div>
+    </footer>
+
+  </section>
+
+  <!-- ========== SLIDE 2 : INTRODUCTION ========== -->
+  <section class="slide" data-slide="2">
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge red">01</span>
+        <span class="section-label">Introduction</span>
+      </div>
+      <h2 class="s-title">Why <span class="accent">passwords</span> still matter.</h2>
+    </div>
+
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p class="lead">A password is the <u>first — and often only — line of defense</u> for an online account.</p>
+
+        <ul class="intro-points">
+          <li>Weak or reused passwords are the <strong>main entry vector</strong> for attackers.</li>
+          <li>Most users <strong>don't know</strong> their password has already leaked.</li>
+          <li>One reused password = many accounts compromised at once.</li>
+        </ul>
+
+        <div class="good-bad">
+          <div class="gb-card good">
+            <span class="gb-tag">✓ A strong password</span>
+            <ul>
+              <li>14+ characters long</li>
+              <li>Mix of upper, lower, digits, symbols</li>
+              <li>Unique for every account</li>
+              <li>Stored in a password manager</li>
+            </ul>
+          </div>
+          <div class="gb-card bad">
+            <span class="gb-tag">✗ A weak / reused one</span>
+            <ul>
+              <li>Short (&lt; 8 characters)</li>
+              <li>Common words: <em>password, 123456…</em></li>
+              <li>Based on name or birthday</li>
+              <li>Used on multiple sites at once</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-stats">
+        <div class="stat">
+          <span class="num">81%</span>
+          <div class="stat-body">
+            <span class="lbl">of data breaches involve a weak or stolen password.</span>
+            <span class="src">Verizon — DBIR 2024</span>
+          </div>
+        </div>
+        <div class="stat">
+          <span class="num">700M+</span>
+          <div class="stat-body">
+            <span class="lbl">compromised passwords indexed worldwide.</span>
+            <span class="src">HaveIBeenPwned — Troy Hunt</span>
+          </div>
+        </div>
+        <div class="stat">
+          <span class="num">65%</span>
+          <div class="stat-body">
+            <span class="lbl">of users reuse the same password on several accounts.</span>
+            <span class="src">Google × Harris Poll, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sources-line">
+      <strong>Sources:</strong>
+      Verizon Data Breach Investigations Report 2024 ·
+      haveibeenpwned.com ·
+      Google &amp; Harris Poll — Online Security Survey, 2019.
+    </div>
+
+    <img class="face intro-character" src="assets/rage/cereal.jpg" alt="Cereal Guy" />
+  </section>
+
+  <!-- ========== SLIDE 3 : THREE PILLARS ========== -->
+  <section class="slide" data-slide="3">
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge">02</span>
+        <span class="section-label">Overview</span>
+      </div>
+      <h2 class="s-title">That's where <span class="accent">ScanPass</span> comes in.</h2>
+      <p class="s-desc">
+        <strong>ScanPass</strong> is a free, browser-based password security toolkit.
+        No install, no account, no server — everything runs <strong>locally</strong>
+        on your own machine. Anyone can check how strong their password really is,
+        see what real attacks would do to it, and learn good security habits from
+        an AI coach.
+        <span class="caveat-inline">Three complementary tools, one toolkit:</span>
+      </p>
+    </div>
+
+    <div class="pillars">
+
+      <div class="pillar pillar-blue">
+        <span class="num">01</span>
+        <img class="face" src="assets/rage/challengeaccepted.jpg" alt="Challenge Accepted" />
+        <h3>Password Verifier</h3>
+        <p>Real-time strength analysis and breach detection via HaveIBeenPwned.</p>
+        <span class="pillar-tag">For everyone — in 5 seconds.</span>
+      </div>
+
+      <div class="pillar pillar-red">
+        <span class="num">02</span>
+        <img class="face" src="assets/rage/miradafija.jpg" alt="Mirada Fija" />
+        <h3>Attack Simulator</h3>
+        <p>Three real attack techniques tested live against your password.</p>
+        <span class="pillar-tag">See it like a hacker would.</span>
+      </div>
+
+      <div class="pillar pillar-green">
+        <span class="num">03</span>
+        <img class="face" src="assets/rage/likeasir.jpg" alt="Like a Sir" />
+        <h3>K@rl — AI Coach</h3>
+        <p>A cybersecurity coach powered by Google Gemini 3 Flash.</p>
+        <span class="pillar-tag">Ask anything, learn fast.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 4 : VERIFIER ========== -->
+  <section class="slide" data-slide="4">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">ANDRIANARIVONY Toky Aroniaina</span>
+      <span class="pb-num">#4608</span>
+    </div>
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge">03</span>
+        <span class="section-label">Feature 1</span>
+      </div>
+      <h2 class="s-title">The <span class="accent">Verifier</span> tab.</h2>
+      <p class="s-desc">
+        Type any password — ScanPass scores its strength in real time
+        <strong>and</strong> queries the <strong>HaveIBeenPwned</strong> database
+        (700M+ leaked passwords) to tell you if yours has already been exposed
+        in a known breach. <span class="caveat-inline">All in one click.</span>
+      </p>
+    </div>
+
+    <div class="feat-grid">
+
+      <div class="app-sketch">
+        <div class="tabs">
+          <span class="tab active">Verify</span>
+          <span class="tab">Simulate</span>
+          <span class="tab">K@rl</span>
+        </div>
+        <span class="lbl">Enter your password</span>
+        <span class="input">P@ssw0rd2024!</span>
+        <div class="meter">
+          <div class="bar"><div class="fill"></div></div>
+          <span class="tag">Strong ✓</span>
+        </div>
+        <span class="btn">Verify it!</span>
+        <div class="divider"></div>
+        <span class="lbl">Generator</span>
+        <span class="input">m7$Kp2!nXq4&amp;Z</span>
+        <div class="meter">
+          <span class="lbl" style="margin:0">length</span>
+          <div class="bar"><div class="fill" style="width:60%"></div></div>
+          <span class="tag" style="color:var(--ink)">14</span>
+        </div>
+      </div>
+
+      <ul class="feat-list">
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span>
+          <div>
+            <h4>Real-time strength meter</h4>
+            <p>Length, complexity and character diversity scored as you type.</p>
+          </div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span>
+          <div>
+            <h4>Breach check</h4>
+            <p>One click queries the HaveIBeenPwned database for known leaks.</p>
+          </div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span>
+          <div>
+            <h4>Password generator</h4>
+            <p>Adjustable length slider, instant strong random passwords.</p>
+          </div>
+        </li>
+        <li>
+          <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span>
+          <div>
+            <h4>Local history</h4>
+            <p>Shows previously tested passwords flagged as breached.</p>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 5 : FLOW + PRIVACY ========== -->
+  <section class="slide" data-slide="5">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">ANDRIANARIVONY Toky Aroniaina</span>
+      <span class="pb-num">#4608</span>
+    </div>
+    <div class="s-header tight">
+      <div class="row">
+        <span class="num-badge">03</span>
+        <span class="section-label">How it works</span>
+      </div>
+      <h2 class="s-title">The <span class="accent">k-Anonymity</span> trick.</h2>
+      <p class="s-desc">Your password never leaves your machine. Here's the step-by-step + the why behind it.</p>
+    </div>
+
+    <div class="flow-grid">
+
+      <div class="flow-card">
+        <h4>① Local hashing</h4>
+        <p>Browser hashes the password with <strong>SHA-1</strong>, locally.</p>
+        <code>pwd → 5BAA61E4C9B93F3F0682250B…</code>
+      </div>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 20 H30"/><path d="M22 12 l8 8 -8 8"/>
+        </svg>
+      </div>
+
+      <div class="flow-card">
+        <h4>② Prefix only</h4>
+        <p>Only <strong>5 characters</strong> of the hash leave your machine.</p>
+        <code>5BAA6</code>
+      </div>
+
+      <div class="flow-arrow">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 20 H30"/><path d="M22 12 l8 8 -8 8"/>
+        </svg>
+      </div>
+
+      <div class="flow-card">
+        <h4>③ Local match</h4>
+        <p>HIBP returns all hashes for that prefix → compared locally.</p>
+        <code>match? → exposed / safe ✓</code>
+      </div>
+
+    </div>
+
+    <div class="why-notes">
+      <h6 class="why-notes-title">Key technical choices</h6>
+
+      <div class="why-row">
+        <div class="why-item">
+          <span class="why-tag tag-blue">SHA-1</span>
+          <span>used only as a <strong>lookup key</strong> for HIBP — never as a security primitive.</span>
+        </div>
+        <div class="why-item">
+          <span class="why-tag tag-red">k-Anonymity</span>
+          <span>only the <strong>5-char prefix</strong> of the hash leaves your browser.</span>
+        </div>
+        <div class="why-item">
+          <span class="why-tag tag-green">HIBP</span>
+          <span>Troy Hunt's DB — <strong>700M+</strong> compromised passwords indexed.</span>
+        </div>
+        <div class="why-item">
+          <span class="why-tag tag-ink">100 % client-side</span>
+          <span>no password ever <strong>transmitted, stored or logged</strong>.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 6 : ATTACK OVERVIEW ========== -->
+  <section class="slide" data-slide="6">
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge red">04</span>
+        <span class="section-label">Feature 2</span>
+      </div>
+      <h2 class="s-title">Attack <span class="accent">Simulator.</span></h2>
+      <p class="s-desc">Three real-world techniques run against your password.</p>
+    </div>
+
+    <div class="attack-overview">
+
+      <div class="attack-list">
+        <div class="attack-pill">
+          <span class="num">1</span>
+          <span>Dictionary Attack</span>
+        </div>
+        <div class="attack-pill">
+          <span class="num">2</span>
+          <span>Rule-based Mutations</span>
+        </div>
+        <div class="attack-pill">
+          <span class="num">3</span>
+          <span>Brute Force Estimation</span>
+        </div>
+        <p class="handwriting" style="margin-top:8px">
+          Each attack will be presented by a member of the group.
+        </p>
+      </div>
+
+      <div class="app-sketch simulate-mock">
+        <div class="tabs">
+          <span class="tab">Verify</span>
+          <span class="tab active">Simulate</span>
+          <span class="tab">K@rl</span>
+        </div>
+
+        <span class="lbl">Password to test</span>
+        <span class="input">P@ssw0rd2024!</span>
+
+        <span class="lbl">Choose attack type</span>
+        <div class="attack-options">
+          <span class="opt active">Dictionary</span>
+          <span class="opt">Mutations</span>
+          <span class="opt">Brute Force</span>
+        </div>
+
+        <span class="btn">Launch simulation</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 7 : DICTIONARY ATTACK ========== -->
+  <section class="slide" data-slide="7">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">RIVOMANANTIARAY Miora Ny Aina</span>
+      <span class="pb-num">#4609</span>
+    </div>
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge red">04.1</span>
+        <span class="section-label">Attack #1</span>
+      </div>
+      <h2 class="s-title"><span class="accent">Dictionary</span> Attack.</h2>
+    </div>
+
+    <div class="attack-detail">
+
+      <div class="attack-character">
+        <img class="face" src="assets/rage/fuckyea.jpg" alt="Fuck Yea" />
+        <span class="bubble">lol your pwd is in my list</span>
+        <ul class="meta-table">
+          <li><span class="k">dataset</span> <span class="v">10,000 commons</span></li>
+          <li><span class="k">speed</span> <span class="v">instant</span></li>
+          <li><span class="k">detects</span> <span class="v">predictable</span></li>
+        </ul>
+      </div>
+
+      <div class="attack-body">
+        <h3>How it works</h3>
+        <p>The simulator loads a list of the <strong>10,000 most commonly used passwords</strong> — gathered from major breaches — and checks whether the entered password matches one of them.</p>
+        <h3>Why it matters</h3>
+        <p>Attackers <strong>always try this first</strong>. A predictable password is cracked in milliseconds, no matter how complex it looks.</p>
+
+        <div class="examples">
+          <span class="lbl">examples caught:</span>
+          <code>123456</code>
+          <code>password</code>
+          <code>qwerty</code>
+          <code>iloveyou</code>
+          <code>admin</code>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 8 : MUTATIONS ========== -->
+  <section class="slide" data-slide="8">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">RAHAJASON Audrey</span>
+      <span class="pb-num">#4606</span>
+    </div>
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge red">04.2</span>
+        <span class="section-label">Attack #2</span>
+      </div>
+      <h2 class="s-title"><span class="accent">Rule-based</span> Mutations.</h2>
+    </div>
+
+    <div class="attack-detail">
+
+      <div class="attack-character">
+        <img class="face" src="assets/rage/megusta.jpg" alt="Me Gusta" />
+        <span class="bubble">i lov P@ssw0rd123 !!</span>
+        <ul class="meta-table">
+          <li><span class="k">method</span> <span class="v">transformations</span></li>
+          <li><span class="k">rules</span> <span class="v">leet · suffix · case</span></li>
+          <li><span class="k">detects</span> <span class="v">"smart" weak pwds</span></li>
+        </ul>
+      </div>
+
+      <div class="attack-body">
+        <h3>How it works</h3>
+        <p>Common base words are transformed with predictable <strong>rules</strong>: replacing letters with numbers, appending suffixes, switching case.</p>
+
+        <div class="mutations">
+          <div class="mut-row"><span>password</span><span class="arrow">→</span><code>P@ssw0rd</code></div>
+          <div class="mut-row"><span>password</span><span class="arrow">→</span><code>password123</code></div>
+          <div class="mut-row"><span>admin</span><span class="arrow">→</span><code>Adm1n!</code></div>
+          <div class="mut-row"><span>summer</span><span class="arrow">→</span><code>Summer2024</code></div>
+        </div>
+
+        <h3>Why it matters</h3>
+        <p>Users believe these tricks make their password unique. They <strong>don't</strong> — attackers automate exactly these mutations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 9 : BRUTE FORCE ========== -->
+  <section class="slide" data-slide="9">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">FETISON Mioralalaina Caline</span>
+      <span class="pb-num">#4610</span>
+    </div>
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge red">04.3</span>
+        <span class="section-label">Attack #3</span>
+      </div>
+      <h2 class="s-title"><span class="accent">Brute Force</span> Estimation.</h2>
+    </div>
+
+    <div class="attack-detail">
+
+      <div class="attack-character">
+        <img class="face" src="assets/rage/cereal.jpg" alt="Cereal Guy" />
+        <span class="bubble">how long till u crack? do the math.</span>
+        <ul class="meta-table">
+          <li><span class="k">method</span> <span class="v">math model</span></li>
+          <li><span class="k">baseline</span> <span class="v">modern GPU</span></li>
+          <li><span class="k">output</span> <span class="v">time-to-crack</span></li>
+        </ul>
+      </div>
+
+      <div class="attack-body">
+        <h3>How it works</h3>
+        <p>We compute the <strong>keyspace</strong> (charset size ^ password length) and divide by the number of guesses a modern GPU can perform per second.</p>
+
+        <div class="brute-table">
+          <div class="brute-row brute-head"><span>length</span><span>charset</span><span>time to crack</span></div>
+          <div class="brute-row"><span>8</span><span>lowercase</span><span class="bad">~ 2 seconds</span></div>
+          <div class="brute-row"><span>10</span><span>alphanumeric</span><span class="mid">~ 1 hour</span></div>
+          <div class="brute-row"><span>14</span><span>full ASCII</span><span class="good">~ 50 million years</span></div>
+        </div>
+
+        <h3>Why it matters</h3>
+        <p>Length <strong>beats</strong> complexity. Adding one character grows the search space exponentially.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 10 : K@RL ========== -->
+  <section class="slide" data-slide="10">
+    <div class="presenter-badge">
+      <span class="pb-label">presented by</span>
+      <span class="pb-name">ANDRIANJARA Jacob Rino</span>
+      <span class="pb-num">#4611</span>
+    </div>
+    <div class="s-header">
+      <div class="row">
+        <span class="num-badge">05</span>
+        <span class="section-label">Feature 3</span>
+      </div>
+      <h2 class="s-title">Meet <span class="accent">K@rl</span> — your coach.</h2>
+      <p class="s-desc">A chatbot specialised in cybersecurity, powered by Gemini.</p>
+    </div>
+
+    <div class="karl-grid">
+
+      <div class="chat-sketch">
+        <div class="head">
+          <div class="avatar">K@</div>
+          <div>
+            <div class="name">K@rl</div>
+            <div class="role">AI Security Coach</div>
+          </div>
+        </div>
+        <div class="chat-msg user">How do I make a strong password?</div>
+        <div class="chat-msg bot">At least 14 characters, mix types, never reuse. A passphrase like <em>river-jazz-cloud-42!</em> works wonders.</div>
+        <div class="chat-msg user">And two-factor auth?</div>
+        <div class="chat-msg bot">2FA adds a second proof of identity. Always prefer an authenticator app over SMS — SIM swap attacks are common.</div>
+      </div>
+
+      <div class="karl-side">
+        <div class="powered">
+          <span class="lbl">powered by</span>
+          <strong>Google Gemini 3 Flash</strong>
+        </div>
+
+        <h3>What K@rl does</h3>
+        <ul>
+          <li>Explains password best practices in plain language.</li>
+          <li>Answers cybersecurity questions of any level.</li>
+          <li>Coaches users on 2FA, phishing, password managers.</li>
+          <li>Adapts to beginners and advanced users alike.</li>
+          <li>Handles general questions too — not just security.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 11 : LIVE DEMO ========== -->
+  <section class="slide" data-slide="11">
+    <div class="demo">
+      <img class="face" src="assets/rage/fuckyea.jpg" alt="Cheers" />
+      <span class="section-label">06 — Live demonstration</span>
+      <h2>Let's try it. <span style="color:var(--red)">Live.</span></h2>
+      <p>Open the app, throw a real password at it, and see what ScanPass finds.</p>
+
+      <a class="link" href="https://scanpass-one.vercel.app/" target="_blank" rel="noopener">
+        scanpass-one.vercel.app
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+
+      <div class="steps">
+        <div class="step"><span class="n">1</span> Open the <strong>Verify</strong> tab</div>
+        <div class="step"><span class="n">2</span> Run an <strong>Attack</strong></div>
+        <div class="step"><span class="n">3</span> Chat with <strong>K@rl</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SLIDE 12 : THANK YOU ========== -->
+  <section class="slide" data-slide="12">
+    <div class="end">
+
+      <div class="end-top">
+        <img class="end-freddie" src="assets/rage/freddie.jpg" alt="Freddie Mercury Rage Pose" />
+        <h1 class="end-title">Thank <span class="red">you!</span></h1>
+      </div>
+
+      <div class="end-group">GROUP 3 — M1 OCC</div>
+
+      <div class="end-questions">
+        <img class="end-ohcrap" src="assets/rage/ohcrap.jpg" alt="Oh Crap" />
+        <div class="eq-text">
+          <span class="eq-bubble">Any questions?</span>
+          <span class="eq-sub">…please no hard ones.</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<nav class="controls">
+  <button class="ctrl-btn" id="prevBtn" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <button class="ctrl-btn" id="nextBtn" aria-label="Next slide">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+  <button class="ctrl-btn" id="fsBtn" aria-label="Fullscreen">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+  </button>
+  <button class="ctrl-btn" id="qrBtn" aria-label="Phone remote control">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="7" rx="1"/>
+      <rect x="14" y="3" width="7" height="7" rx="1"/>
+      <rect x="3" y="14" width="7" height="7" rx="1"/>
+      <path d="M14 14h3v3M21 14v3M14 21h3M21 17v4M17 21h4"/>
+    </svg>
+  </button>
+</nav>
+
+<!-- ========== QR MODAL ========== -->
+<div class="qr-modal" id="qrModal">
+  <div class="qr-card">
+    <button class="qr-close" id="qrClose" aria-label="Close">×</button>
+    <h3 class="qr-title">Control with your phone</h3>
+    <p class="qr-sub">Scan this code with your phone to remote-control the slides.</p>
+    <div class="qr-image" id="qrImage">
+      <div class="qr-spinner">connecting…</div>
+    </div>
+    <div class="qr-status" id="qrStatus">starting peer connection…</div>
+    <div class="qr-url" id="qrUrl"></div>
+    <p class="qr-hint">Both devices need internet. Your phone must be able to reach this page's URL.</p>
+  </div>
+</div>
+
+<!-- ========== REMOTE CONTROL UI (shown on phone via ?remote=ID) ========== -->
+<div class="remote-ui" id="remoteUI">
+  <div class="remote-card">
+    <h2 class="remote-title">ScanPass <span class="r-red">Remote</span></h2>
+    <div class="remote-status" id="remoteStatus">connecting…</div>
+    <div class="remote-slide" id="remoteSlide">slide — / —</div>
+    <div class="remote-btns">
+      <button class="r-btn r-prev" id="rPrev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        <span>Previous</span>
+      </button>
+      <button class="r-btn r-next" id="rNext">
+        <span>Next</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+    </div>
+    <div class="remote-btns secondary">
+      <button class="r-btn r-small" id="rFirst">⏮ first</button>
+      <button class="r-btn r-small" id="rFs">⛶ fullscreen</button>
+      <button class="r-btn r-small" id="rLast">⏭ last</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
